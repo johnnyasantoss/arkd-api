@@ -25,6 +25,7 @@ export interface SessionPartial {
   'revokedAt'?: (number | string | Long);
   'groupId'?: (Buffer | Uint8Array | string);
   'featureConfigs'?: ({[key: string]: string});
+  'privacyFlags'?: (number | string | Long);
 }
 
 export interface Session {
@@ -46,4 +47,5 @@ export interface Session {
   'revokedAt': (string);
   'groupId': (Buffer);
   'featureConfigs': ({[key: string]: string});
+  'privacyFlags': (string);
 }

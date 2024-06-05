@@ -13,6 +13,8 @@ export interface AddAutopilotSessionRequestPartial {
   'sessionRules'?: (_litrpc_RulesMapPartial | null);
   'noPrivacyMapper'?: (boolean);
   'linkedGroupId'?: (Buffer | Uint8Array | string);
+  'privacyFlags'?: (number | string | Long);
+  'privacyFlagsSet'?: (boolean);
 }
 
 export interface AddAutopilotSessionRequest {
@@ -24,4 +26,6 @@ export interface AddAutopilotSessionRequest {
   'sessionRules': (_litrpc_RulesMap | null);
   'noPrivacyMapper': (boolean);
   'linkedGroupId': (Buffer);
+  'privacyFlags': (string);
+  'privacyFlagsSet': (boolean);
 }
