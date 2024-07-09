@@ -11,6 +11,7 @@ export interface ProtoGrpcType {
   litrpc: {
     AddSessionRequest: MessageTypeDefinition
     AddSessionResponse: MessageTypeDefinition
+    ChannelConstraint: MessageTypeDefinition
     ChannelPolicyBounds: MessageTypeDefinition
     ChannelRestrict: MessageTypeDefinition
     HistoryLimit: MessageTypeDefinition

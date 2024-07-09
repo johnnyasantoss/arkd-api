@@ -8,6 +8,7 @@ import type { OnChainBudgetPartial as _litrpc_OnChainBudgetPartial, OnChainBudge
 import type { SendToSelfPartial as _litrpc_SendToSelfPartial, SendToSelf as _litrpc_SendToSelf } from '../litrpc/SendToSelf';
 import type { ChannelRestrictPartial as _litrpc_ChannelRestrictPartial, ChannelRestrict as _litrpc_ChannelRestrict } from '../litrpc/ChannelRestrict';
 import type { PeerRestrictPartial as _litrpc_PeerRestrictPartial, PeerRestrict as _litrpc_PeerRestrict } from '../litrpc/PeerRestrict';
+import type { ChannelConstraintPartial as _litrpc_ChannelConstraintPartial, ChannelConstraint as _litrpc_ChannelConstraint } from '../litrpc/ChannelConstraint';
 
 export interface RuleValuePartial {
   'rateLimit'?: (_litrpc_RateLimitPartial | null);
@@ -18,7 +19,8 @@ export interface RuleValuePartial {
   'sendToSelf'?: (_litrpc_SendToSelfPartial | null);
   'channelRestrict'?: (_litrpc_ChannelRestrictPartial | null);
   'peerRestrict'?: (_litrpc_PeerRestrictPartial | null);
-  'value'?: "rateLimit"|"chanPolicyBounds"|"historyLimit"|"offChainBudget"|"onChainBudget"|"sendToSelf"|"channelRestrict"|"peerRestrict";
+  'channelConstraint'?: (_litrpc_ChannelConstraintPartial | null);
+  'value'?: "rateLimit"|"chanPolicyBounds"|"historyLimit"|"offChainBudget"|"onChainBudget"|"sendToSelf"|"channelRestrict"|"peerRestrict"|"channelConstraint";
 }
 
 export interface RuleValue {
@@ -30,5 +32,6 @@ export interface RuleValue {
   'sendToSelf'?: (_litrpc_SendToSelf | null);
   'channelRestrict'?: (_litrpc_ChannelRestrict | null);
   'peerRestrict'?: (_litrpc_PeerRestrict | null);
-  'value': "rateLimit"|"chanPolicyBounds"|"historyLimit"|"offChainBudget"|"onChainBudget"|"sendToSelf"|"channelRestrict"|"peerRestrict";
+  'channelConstraint'?: (_litrpc_ChannelConstraint | null);
+  'value': "rateLimit"|"chanPolicyBounds"|"historyLimit"|"offChainBudget"|"onChainBudget"|"sendToSelf"|"channelRestrict"|"peerRestrict"|"channelConstraint";
 }

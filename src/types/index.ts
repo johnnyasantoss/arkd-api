@@ -8,6 +8,7 @@ export * from './litrpc/AddAutopilotSessionResponse';
 export * from './litrpc/AddSessionRequest';
 export * from './litrpc/AddSessionResponse';
 export * from './litrpc/Autopilot';
+export * from './litrpc/ChannelConstraint';
 export * from './litrpc/ChannelPolicyBounds';
 export * from './litrpc/ChannelRestrict';
 export * from './litrpc/CreateAccountRequest';

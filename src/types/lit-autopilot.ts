@@ -15,6 +15,7 @@ export interface ProtoGrpcType {
     AddSessionRequest: MessageTypeDefinition
     AddSessionResponse: MessageTypeDefinition
     Autopilot: SubtypeConstructor<typeof grpc.Client, _litrpc_AutopilotClient> & { service: _litrpc_AutopilotDefinition }
+    ChannelConstraint: MessageTypeDefinition
     ChannelPolicyBounds: MessageTypeDefinition
     ChannelRestrict: MessageTypeDefinition
     Feature: MessageTypeDefinition
