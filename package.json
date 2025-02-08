@@ -1,11 +1,11 @@
 {
-  "name": "@lightningpolar/litd-api",
-  "version": "0.14.0-alpha.rc1",
-  "description": "Lightning Terminal gRPC client to interact with Lightning Labs `litd` daemon.",
+  "name": "@lightningpolar/arkd-api",
+  "version": "0.4.2",
+  "description": "Arkd gRPC client to interact with Ark Labs `arkd` daemon.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "config": {
-    "litd_release_tag": "v0.14.0-alpha.rc1"
+    "arkd_release_tag": "v0.4.2"
   },
   "files": [
     "dist",
@@ -17,25 +17,27 @@
     "push": "tsc && npm publish --access public",
     "build": "tsc",
     "generate:clean": "rm -rf ./src/types",
-    "generate:protos": "./scripts/update_protos.sh ${npm_package_config_litd_release_tag}",
-    "generate:types": "./node_modules/.bin/proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --inputTemplate=%sPartial --outputTemplate=%s --grpcLib=@grpc/grpc-js --outDir=./src/types/ protos/*.proto",
+    "generate:protos": "./scripts/update_protos.sh ${npm_package_config_arkd_release_tag}",
+    "generate:types": "./node_modules/.bin/proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --inputTemplate=%sPartial --outputTemplate=%s --grpcLib=@grpc/grpc-js -I node_modules/google-proto-files --outDir=./src/types/ protos/*.proto",
     "generate:index": "node ./scripts/generateTypesIndex.js",
     "generate": "npm run generate:clean && npm run generate:protos && npm run generate:types && npm run generate:index"
   },
   "author": {
-    "name": "Jamal James",
-    "url": "https://github.com/jamaljsr"
+    "name": "Johnny Santos",
+    "url": "https://github.com/johnnyasantoss"
   },
   "license": "MIT",
   "dependencies": {
-    "@grpc/grpc-js": "1.10.8",
-    "@grpc/proto-loader": "0.7.13"
+    "@grpc/grpc-js": "~1.12.6",
+    "@grpc/proto-loader": "~0.7.13",
+    "google-proto-files": "~4.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jamaljsr/litd-api.git"
+    "url": "git+https://github.com/johnnyasantoss/arkd-api.git"
   },
   "devDependencies": {
-    "typescript": "4.8.4"
-  }
+    "typescript": "^5.7.3"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
