@@ -11,30 +11,29 @@ npm install @lightningpolar/arkd-api
 # Usage
 
 ```ts
-import { ArkdClient, SessionType } from "@lightningpolar/arkd-api";
+import { ArkdClient } from "../src";
 
-// TODO: Update example
-
-(async () => {
-  const client = ArkdClients.create({
+async function main() {
+  const client = ArkdClient.create({
     socket: "127.0.0.1:10029",
-    // TODO: Check these paths
-    macaroon: "<hex>", // ~/.arkd/mainnet/lit.macaroon
-    cert: "<hex>", // ~/.arkd/tls.cert
+    // macaroon: "<hex>", // from ~/.arkd/data/macaroons/admin.macaroon
+    // cert: "<hex>", // from ~/.arkd/data/tls/cert.pem
   });
 
-  const status = await client.status.subServerStatus();
-  console.log(status);
+  // 30 secs in ms
+  const deadline = 30_000;
 
-  const { sessions } = await client.sessions.listSessions();
-  console.log(sessions);
+  await Promise.all([
+    client.admin.waitForReady(deadline),
+    client.arkService.waitForReady(deadline),
+    client.wallet.waitForReady(deadline),
+  ]);
 
-  const { session } = await client.sessions.addSession({
-    label: "my session",
-    sessionType: SessionType.TYPE_MACAROON_ADMIN,
-    expiryTimestampSeconds: Math.floor(Date.now() / 1000) + 60 * 24 * 90, // in 90 days
-    mailboxServerAddr: "mailbox.terminal.lightning.today:443",
-  });
-  console.log(session?.pairingSecretMnemonic);
-})();
+  // service is ready ...
+  console.info("All services are up and running");
+
+  console.info(await client.arkService.getInfo());
+}
+
+main().catch(console.error);
 ```
