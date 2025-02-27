@@ -1,4 +1,4 @@
-// Original file: protos/admin.proto
+// Original file: protos/types.proto
 
 import type { SweepableOutputPartial as _ark_v1_SweepableOutputPartial, SweepableOutput as _ark_v1_SweepableOutput } from '../../ark/v1/SweepableOutput';
 

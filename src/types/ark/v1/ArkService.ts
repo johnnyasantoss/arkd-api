@@ -10,14 +10,8 @@ import type { GetEventStreamRequestPartial as _ark_v1_GetEventStreamRequestParti
 import type { GetEventStreamResponsePartial as _ark_v1_GetEventStreamResponsePartial, GetEventStreamResponse as _ark_v1_GetEventStreamResponse } from '../../ark/v1/GetEventStreamResponse';
 import type { GetInfoRequestPartial as _ark_v1_GetInfoRequestPartial, GetInfoRequest as _ark_v1_GetInfoRequest } from '../../ark/v1/GetInfoRequest';
 import type { GetInfoResponsePartial as _ark_v1_GetInfoResponsePartial, GetInfoResponse as _ark_v1_GetInfoResponse } from '../../ark/v1/GetInfoResponse';
-import type { GetRoundByIdRequestPartial as _ark_v1_GetRoundByIdRequestPartial, GetRoundByIdRequest as _ark_v1_GetRoundByIdRequest } from '../../ark/v1/GetRoundByIdRequest';
-import type { GetRoundByIdResponsePartial as _ark_v1_GetRoundByIdResponsePartial, GetRoundByIdResponse as _ark_v1_GetRoundByIdResponse } from '../../ark/v1/GetRoundByIdResponse';
-import type { GetRoundRequestPartial as _ark_v1_GetRoundRequestPartial, GetRoundRequest as _ark_v1_GetRoundRequest } from '../../ark/v1/GetRoundRequest';
-import type { GetRoundResponsePartial as _ark_v1_GetRoundResponsePartial, GetRoundResponse as _ark_v1_GetRoundResponse } from '../../ark/v1/GetRoundResponse';
 import type { GetTransactionsStreamRequestPartial as _ark_v1_GetTransactionsStreamRequestPartial, GetTransactionsStreamRequest as _ark_v1_GetTransactionsStreamRequest } from '../../ark/v1/GetTransactionsStreamRequest';
 import type { GetTransactionsStreamResponsePartial as _ark_v1_GetTransactionsStreamResponsePartial, GetTransactionsStreamResponse as _ark_v1_GetTransactionsStreamResponse } from '../../ark/v1/GetTransactionsStreamResponse';
-import type { ListVtxosRequestPartial as _ark_v1_ListVtxosRequestPartial, ListVtxosRequest as _ark_v1_ListVtxosRequest } from '../../ark/v1/ListVtxosRequest';
-import type { ListVtxosResponsePartial as _ark_v1_ListVtxosResponsePartial, ListVtxosResponse as _ark_v1_ListVtxosResponse } from '../../ark/v1/ListVtxosResponse';
 import type { PingRequestPartial as _ark_v1_PingRequestPartial, PingRequest as _ark_v1_PingRequest } from '../../ark/v1/PingRequest';
 import type { PingResponsePartial as _ark_v1_PingResponsePartial, PingResponse as _ark_v1_PingResponse } from '../../ark/v1/PingResponse';
 import type { RegisterInputsForNextRoundRequestPartial as _ark_v1_RegisterInputsForNextRoundRequestPartial, RegisterInputsForNextRoundRequest as _ark_v1_RegisterInputsForNextRoundRequest } from '../../ark/v1/RegisterInputsForNextRoundRequest';
@@ -68,37 +62,10 @@ export interface ArkServiceClient extends grpc.Client {
   getInfo(argument: _ark_v1_GetInfoRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_GetInfoResponse>): grpc.ClientUnaryCall;
   getInfo(argument: _ark_v1_GetInfoRequestPartial, callback: grpc.requestCallback<_ark_v1_GetInfoResponse>): grpc.ClientUnaryCall;
   
-  GetRound(argument: _ark_v1_GetRoundRequestPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_GetRoundResponse>): grpc.ClientUnaryCall;
-  GetRound(argument: _ark_v1_GetRoundRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_ark_v1_GetRoundResponse>): grpc.ClientUnaryCall;
-  GetRound(argument: _ark_v1_GetRoundRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_GetRoundResponse>): grpc.ClientUnaryCall;
-  GetRound(argument: _ark_v1_GetRoundRequestPartial, callback: grpc.requestCallback<_ark_v1_GetRoundResponse>): grpc.ClientUnaryCall;
-  getRound(argument: _ark_v1_GetRoundRequestPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_GetRoundResponse>): grpc.ClientUnaryCall;
-  getRound(argument: _ark_v1_GetRoundRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_ark_v1_GetRoundResponse>): grpc.ClientUnaryCall;
-  getRound(argument: _ark_v1_GetRoundRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_GetRoundResponse>): grpc.ClientUnaryCall;
-  getRound(argument: _ark_v1_GetRoundRequestPartial, callback: grpc.requestCallback<_ark_v1_GetRoundResponse>): grpc.ClientUnaryCall;
-  
-  GetRoundById(argument: _ark_v1_GetRoundByIdRequestPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_GetRoundByIdResponse>): grpc.ClientUnaryCall;
-  GetRoundById(argument: _ark_v1_GetRoundByIdRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_ark_v1_GetRoundByIdResponse>): grpc.ClientUnaryCall;
-  GetRoundById(argument: _ark_v1_GetRoundByIdRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_GetRoundByIdResponse>): grpc.ClientUnaryCall;
-  GetRoundById(argument: _ark_v1_GetRoundByIdRequestPartial, callback: grpc.requestCallback<_ark_v1_GetRoundByIdResponse>): grpc.ClientUnaryCall;
-  getRoundById(argument: _ark_v1_GetRoundByIdRequestPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_GetRoundByIdResponse>): grpc.ClientUnaryCall;
-  getRoundById(argument: _ark_v1_GetRoundByIdRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_ark_v1_GetRoundByIdResponse>): grpc.ClientUnaryCall;
-  getRoundById(argument: _ark_v1_GetRoundByIdRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_GetRoundByIdResponse>): grpc.ClientUnaryCall;
-  getRoundById(argument: _ark_v1_GetRoundByIdRequestPartial, callback: grpc.requestCallback<_ark_v1_GetRoundByIdResponse>): grpc.ClientUnaryCall;
-  
   GetTransactionsStream(argument: _ark_v1_GetTransactionsStreamRequestPartial, metadata: grpc.Metadata, options?: grpc.CallOptions): grpc.ClientReadableStream<_ark_v1_GetTransactionsStreamResponse>;
   GetTransactionsStream(argument: _ark_v1_GetTransactionsStreamRequestPartial, options?: grpc.CallOptions): grpc.ClientReadableStream<_ark_v1_GetTransactionsStreamResponse>;
   getTransactionsStream(argument: _ark_v1_GetTransactionsStreamRequestPartial, metadata: grpc.Metadata, options?: grpc.CallOptions): grpc.ClientReadableStream<_ark_v1_GetTransactionsStreamResponse>;
   getTransactionsStream(argument: _ark_v1_GetTransactionsStreamRequestPartial, options?: grpc.CallOptions): grpc.ClientReadableStream<_ark_v1_GetTransactionsStreamResponse>;
-  
-  ListVtxos(argument: _ark_v1_ListVtxosRequestPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_ListVtxosResponse>): grpc.ClientUnaryCall;
-  ListVtxos(argument: _ark_v1_ListVtxosRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_ark_v1_ListVtxosResponse>): grpc.ClientUnaryCall;
-  ListVtxos(argument: _ark_v1_ListVtxosRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_ListVtxosResponse>): grpc.ClientUnaryCall;
-  ListVtxos(argument: _ark_v1_ListVtxosRequestPartial, callback: grpc.requestCallback<_ark_v1_ListVtxosResponse>): grpc.ClientUnaryCall;
-  listVtxos(argument: _ark_v1_ListVtxosRequestPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_ListVtxosResponse>): grpc.ClientUnaryCall;
-  listVtxos(argument: _ark_v1_ListVtxosRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_ark_v1_ListVtxosResponse>): grpc.ClientUnaryCall;
-  listVtxos(argument: _ark_v1_ListVtxosRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_ListVtxosResponse>): grpc.ClientUnaryCall;
-  listVtxos(argument: _ark_v1_ListVtxosRequestPartial, callback: grpc.requestCallback<_ark_v1_ListVtxosResponse>): grpc.ClientUnaryCall;
   
   Ping(argument: _ark_v1_PingRequestPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_ark_v1_PingResponse>): grpc.ClientUnaryCall;
   Ping(argument: _ark_v1_PingRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_ark_v1_PingResponse>): grpc.ClientUnaryCall;
@@ -183,13 +150,7 @@ export interface ArkServiceHandlers extends grpc.UntypedServiceImplementation {
   
   GetInfo: grpc.handleUnaryCall<_ark_v1_GetInfoRequest, _ark_v1_GetInfoResponsePartial>;
   
-  GetRound: grpc.handleUnaryCall<_ark_v1_GetRoundRequest, _ark_v1_GetRoundResponsePartial>;
-  
-  GetRoundById: grpc.handleUnaryCall<_ark_v1_GetRoundByIdRequest, _ark_v1_GetRoundByIdResponsePartial>;
-  
   GetTransactionsStream: grpc.handleServerStreamingCall<_ark_v1_GetTransactionsStreamRequest, _ark_v1_GetTransactionsStreamResponsePartial>;
-  
-  ListVtxos: grpc.handleUnaryCall<_ark_v1_ListVtxosRequest, _ark_v1_ListVtxosResponsePartial>;
   
   Ping: grpc.handleUnaryCall<_ark_v1_PingRequest, _ark_v1_PingResponsePartial>;
   
@@ -214,10 +175,7 @@ export interface ArkServiceDefinition extends grpc.ServiceDefinition {
   GetBoardingAddress: MethodDefinition<_ark_v1_GetBoardingAddressRequestPartial, _ark_v1_GetBoardingAddressResponsePartial, _ark_v1_GetBoardingAddressRequest, _ark_v1_GetBoardingAddressResponse>
   GetEventStream: MethodDefinition<_ark_v1_GetEventStreamRequestPartial, _ark_v1_GetEventStreamResponsePartial, _ark_v1_GetEventStreamRequest, _ark_v1_GetEventStreamResponse>
   GetInfo: MethodDefinition<_ark_v1_GetInfoRequestPartial, _ark_v1_GetInfoResponsePartial, _ark_v1_GetInfoRequest, _ark_v1_GetInfoResponse>
-  GetRound: MethodDefinition<_ark_v1_GetRoundRequestPartial, _ark_v1_GetRoundResponsePartial, _ark_v1_GetRoundRequest, _ark_v1_GetRoundResponse>
-  GetRoundById: MethodDefinition<_ark_v1_GetRoundByIdRequestPartial, _ark_v1_GetRoundByIdResponsePartial, _ark_v1_GetRoundByIdRequest, _ark_v1_GetRoundByIdResponse>
   GetTransactionsStream: MethodDefinition<_ark_v1_GetTransactionsStreamRequestPartial, _ark_v1_GetTransactionsStreamResponsePartial, _ark_v1_GetTransactionsStreamRequest, _ark_v1_GetTransactionsStreamResponse>
-  ListVtxos: MethodDefinition<_ark_v1_ListVtxosRequestPartial, _ark_v1_ListVtxosResponsePartial, _ark_v1_ListVtxosRequest, _ark_v1_ListVtxosResponse>
   Ping: MethodDefinition<_ark_v1_PingRequestPartial, _ark_v1_PingResponsePartial, _ark_v1_PingRequest, _ark_v1_PingResponse>
   RegisterInputsForNextRound: MethodDefinition<_ark_v1_RegisterInputsForNextRoundRequestPartial, _ark_v1_RegisterInputsForNextRoundResponsePartial, _ark_v1_RegisterInputsForNextRoundRequest, _ark_v1_RegisterInputsForNextRoundResponse>
   RegisterOutputsForNextRound: MethodDefinition<_ark_v1_RegisterOutputsForNextRoundRequestPartial, _ark_v1_RegisterOutputsForNextRoundResponsePartial, _ark_v1_RegisterOutputsForNextRoundRequest, _ark_v1_RegisterOutputsForNextRoundResponse>

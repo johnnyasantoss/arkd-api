@@ -1,4 +1,4 @@
-// Original file: protos/service.proto
+// Original file: protos/types.proto
 
 
 export interface TapscriptsPartial {

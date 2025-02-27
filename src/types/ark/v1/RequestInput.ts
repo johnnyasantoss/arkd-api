@@ -2,12 +2,14 @@
 
 import type { Long } from '@grpc/proto-loader';
 
-export interface OutputPartial {
-  'address'?: (string);
+export interface RequestInputPartial {
+  'txid'?: (string);
+  'vout'?: (number);
   'amount'?: (number | string | Long);
 }
 
-export interface Output {
-  'address': (string);
+export interface RequestInput {
+  'txid': (string);
+  'vout': (number);
   'amount': (string);
 }

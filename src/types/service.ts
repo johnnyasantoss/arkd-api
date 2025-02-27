@@ -19,16 +19,11 @@ export interface ProtoGrpcType {
       GetEventStreamResponse: MessageTypeDefinition
       GetInfoRequest: MessageTypeDefinition
       GetInfoResponse: MessageTypeDefinition
-      GetRoundByIdRequest: MessageTypeDefinition
-      GetRoundByIdResponse: MessageTypeDefinition
-      GetRoundRequest: MessageTypeDefinition
-      GetRoundResponse: MessageTypeDefinition
       GetTransactionsStreamRequest: MessageTypeDefinition
       GetTransactionsStreamResponse: MessageTypeDefinition
       Input: MessageTypeDefinition
-      ListVtxosRequest: MessageTypeDefinition
-      ListVtxosResponse: MessageTypeDefinition
       MarketHour: MessageTypeDefinition
+      Musig2: MessageTypeDefinition
       Node: MessageTypeDefinition
       Outpoint: MessageTypeDefinition
       Output: MessageTypeDefinition
@@ -40,6 +35,7 @@ export interface ProtoGrpcType {
       RegisterInputsForNextRoundResponse: MessageTypeDefinition
       RegisterOutputsForNextRoundRequest: MessageTypeDefinition
       RegisterOutputsForNextRoundResponse: MessageTypeDefinition
+      RequestInput: MessageTypeDefinition
       Round: MessageTypeDefinition
       RoundFailed: MessageTypeDefinition
       RoundFinalizationEvent: MessageTypeDefinition
@@ -48,6 +44,7 @@ export interface ProtoGrpcType {
       RoundSigningNoncesGeneratedEvent: MessageTypeDefinition
       RoundStage: EnumTypeDefinition
       RoundTransaction: MessageTypeDefinition
+      ScheduledSweep: MessageTypeDefinition
       SetNostrRecipientRequest: MessageTypeDefinition
       SetNostrRecipientResponse: MessageTypeDefinition
       SignedVtxoOutpoint: MessageTypeDefinition
@@ -59,9 +56,11 @@ export interface ProtoGrpcType {
       SubmitTreeNoncesResponse: MessageTypeDefinition
       SubmitTreeSignaturesRequest: MessageTypeDefinition
       SubmitTreeSignaturesResponse: MessageTypeDefinition
+      SweepableOutput: MessageTypeDefinition
       Tapscripts: MessageTypeDefinition
       Tree: MessageTypeDefinition
       TreeLevel: MessageTypeDefinition
+      TxRequestInfo: MessageTypeDefinition
       Vtxo: MessageTypeDefinition
     }
   }
@@ -73,7 +72,6 @@ export interface ProtoGrpcType {
     }
     protobuf: {
       DescriptorProto: MessageTypeDefinition
-      Duration: MessageTypeDefinition
       EnumDescriptorProto: MessageTypeDefinition
       EnumOptions: MessageTypeDefinition
       EnumValueDescriptorProto: MessageTypeDefinition
@@ -92,7 +90,6 @@ export interface ProtoGrpcType {
       ServiceDescriptorProto: MessageTypeDefinition
       ServiceOptions: MessageTypeDefinition
       SourceCodeInfo: MessageTypeDefinition
-      Timestamp: MessageTypeDefinition
       UninterpretedOption: MessageTypeDefinition
     }
   }

@@ -1,4 +1,4 @@
-// Original file: protos/service.proto
+// Original file: protos/types.proto
 
 import type { NodePartial as _ark_v1_NodePartial, Node as _ark_v1_Node } from '../../ark/v1/Node';
 

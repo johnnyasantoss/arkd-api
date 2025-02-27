@@ -1,4 +1,4 @@
-// Original file: protos/service.proto
+// Original file: protos/types.proto
 
 export const RoundStage = {
   ROUND_STAGE_UNSPECIFIED: 'ROUND_STAGE_UNSPECIFIED',

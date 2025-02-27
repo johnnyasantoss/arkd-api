@@ -1,4 +1,4 @@
-// Original file: protos/admin.proto
+// Original file: protos/types.proto
 
 import type { Long } from '@grpc/proto-loader';
 
