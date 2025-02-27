@@ -1,4 +1,4 @@
-// Original file: protos/service.proto
+// Original file: protos/types.proto
 
 import type { TreePartial as _ark_v1_TreePartial, Tree as _ark_v1_Tree } from '../../ark/v1/Tree';
 

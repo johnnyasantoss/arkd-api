@@ -1,4 +1,4 @@
-// Original file: protos/service.proto
+// Original file: protos/types.proto
 
 import type { OutpointPartial as _ark_v1_OutpointPartial, Outpoint as _ark_v1_Outpoint } from '../../ark/v1/Outpoint';
 import type { Long } from '@grpc/proto-loader';

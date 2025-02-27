@@ -1,11 +1,13 @@
+import { Deadline } from "@grpc/grpc-js";
 import { promisify } from "util";
 import { ArkdClientOptions } from "./clientTypes";
 import { loadProto } from "./proto";
-import { ProtoGrpcType } from "./types/admin";
 import {
   AdminServiceClient,
   CreateNoteRequest,
   CreateNoteResponse,
+  DeleteTxRequestsRequest,
+  DeleteTxRequestsResponse,
   GetMarketHourConfigRequest,
   GetMarketHourConfigResponse,
   GetRoundDetailsRequest,
@@ -14,10 +16,14 @@ import {
   GetRoundsResponse,
   GetScheduledSweepRequest,
   GetScheduledSweepResponse,
+  GetTxRequestQueueRequest,
+  GetTxRequestQueueResponse,
   UpdateMarketHourConfigRequest,
   UpdateMarketHourConfigResponse,
+  WithdrawRequest,
+  WithdrawResponse,
 } from "./types";
-import { Deadline } from "@grpc/grpc-js";
+import { ProtoGrpcType } from "./types/admin";
 
 /**
  * API interface for arkd's admin RPC sub-server.
@@ -99,5 +105,30 @@ export class AdminAPI {
     req: UpdateMarketHourConfigRequest
   ): Promise<UpdateMarketHourConfigResponse> {
     return promisify(this.client.updateMarketHourConfig.bind(this.client))(req);
+  }
+
+  /**
+   * Deletes transaction requests in bulk
+   */
+  async deleteTxRequests(
+    req: DeleteTxRequestsRequest
+  ): Promise<DeleteTxRequestsResponse> {
+    return promisify(this.client.deleteTxRequests.bind(this.client))(req);
+  }
+
+  /**
+   * Get transaction requests in bulk
+   */
+  async getTxRequestQueue(
+    req: GetTxRequestQueueRequest
+  ): Promise<GetTxRequestQueueResponse> {
+    return promisify(this.client.getTxRequestQueue.bind(this.client))(req);
+  }
+
+  /**
+   * Withdraw from Ark
+   */
+  async withdraw(req: WithdrawRequest): Promise<WithdrawResponse> {
+    return promisify(this.client.withdraw.bind(this.client))(req);
   }
 }

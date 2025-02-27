@@ -1,13 +1,13 @@
-// Original file: protos/types.proto
+// Original file: protos/admin.proto
 
 import type { Long } from '@grpc/proto-loader';
 
-export interface OutputPartial {
+export interface WithdrawRequestPartial {
   'address'?: (string);
   'amount'?: (number | string | Long);
 }
 
-export interface Output {
+export interface WithdrawRequest {
   'address': (string);
   'amount': (string);
 }

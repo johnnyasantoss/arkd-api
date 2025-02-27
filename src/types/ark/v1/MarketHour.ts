@@ -1,18 +1,17 @@
-// Original file: protos/service.proto
+// Original file: protos/types.proto
 
-import type { TimestampPartial as _google_protobuf_TimestampPartial, Timestamp as _google_protobuf_Timestamp } from '../../google/protobuf/Timestamp';
-import type { DurationPartial as _google_protobuf_DurationPartial, Duration as _google_protobuf_Duration } from '../../google/protobuf/Duration';
+import type { Long } from '@grpc/proto-loader';
 
 export interface MarketHourPartial {
-  'nextStartTime'?: (_google_protobuf_TimestampPartial | null);
-  'nextEndTime'?: (_google_protobuf_TimestampPartial | null);
-  'period'?: (_google_protobuf_DurationPartial | null);
-  'roundInterval'?: (_google_protobuf_DurationPartial | null);
+  'nextStartTime'?: (number | string | Long);
+  'nextEndTime'?: (number | string | Long);
+  'period'?: (number | string | Long);
+  'roundInterval'?: (number | string | Long);
 }
 
 export interface MarketHour {
-  'nextStartTime': (_google_protobuf_Timestamp | null);
-  'nextEndTime': (_google_protobuf_Timestamp | null);
-  'period': (_google_protobuf_Duration | null);
-  'roundInterval': (_google_protobuf_Duration | null);
+  'nextStartTime': (string);
+  'nextEndTime': (string);
+  'period': (string);
+  'roundInterval': (string);
 }

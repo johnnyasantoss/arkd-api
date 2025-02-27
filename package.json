@@ -1,11 +1,11 @@
 {
   "name": "@lightningpolar/arkd-api",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Arkd gRPC client to interact with Ark Labs `arkd` daemon.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "config": {
-    "arkd_release_tag": "v0.4.2"
+    "arkd_release_tag": "v0.5.0"
   },
   "files": [
     "dist",

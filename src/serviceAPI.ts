@@ -1,7 +1,7 @@
+import { Deadline } from "@grpc/grpc-js";
 import { promisify } from "util";
 import { ArkdClientOptions } from "./clientTypes";
 import { loadProto } from "./proto";
-import { ProtoGrpcType } from "./types/service";
 import {
   ArkServiceClient,
   DeleteNostrRecipientRequest,
@@ -12,14 +12,8 @@ import {
   GetEventStreamResponse,
   GetInfoRequest,
   GetInfoResponse,
-  GetRoundByIdRequest,
-  GetRoundByIdResponse,
-  GetRoundRequest,
-  GetRoundResponse,
   GetTransactionsStreamRequest,
   GetTransactionsStreamResponse,
-  ListVtxosRequest,
-  ListVtxosResponse,
   PingRequest,
   PingResponse,
   RegisterInputsForNextRoundRequest,
@@ -37,7 +31,7 @@ import {
   SubmitTreeSignaturesRequest,
   SubmitTreeSignaturesResponse,
 } from "./types";
-import { Deadline } from "@grpc/grpc-js";
+import { ProtoGrpcType } from "./types/service";
 
 /**
  * API interface for arkd's service RPC sub-server.
@@ -106,33 +100,12 @@ export class ArkServiceAPI {
   }
 
   /**
-   * Get information about a round.
-   */
-  async getRound(req: GetRoundRequest): Promise<GetRoundResponse> {
-    return promisify(this.client.getRound.bind(this.client))(req);
-  }
-
-  /**
-   * Get information about a specific round by its ID.
-   */
-  async getRoundById(req: GetRoundByIdRequest): Promise<GetRoundByIdResponse> {
-    return promisify(this.client.getRoundById.bind(this.client))(req);
-  }
-
-  /**
    * Stream transactions from the blockchain.
    */
   async getTransactionsStream(
     req: GetTransactionsStreamRequest = {}
   ): Promise<GetTransactionsStreamResponse> {
     return promisify(this.client.getTransactionsStream.bind(this.client))(req);
-  }
-
-  /**
-   * List all vtxos in the database.
-   */
-  async listVtxos(req: ListVtxosRequest): Promise<ListVtxosResponse> {
-    return promisify(this.client.listVtxos.bind(this.client))(req);
   }
 
   /**

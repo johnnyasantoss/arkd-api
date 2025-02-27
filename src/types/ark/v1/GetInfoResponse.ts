@@ -5,7 +5,7 @@ import type { Long } from '@grpc/proto-loader';
 
 export interface GetInfoResponsePartial {
   'pubkey'?: (string);
-  'roundLifetime'?: (number | string | Long);
+  'vtxoTreeExpiry'?: (number | string | Long);
   'unilateralExitDelay'?: (number | string | Long);
   'roundInterval'?: (number | string | Long);
   'network'?: (string);
@@ -14,11 +14,12 @@ export interface GetInfoResponsePartial {
   'vtxoDescriptorTemplates'?: (string)[];
   'forfeitAddress'?: (string);
   'marketHour'?: (_ark_v1_MarketHourPartial | null);
+  'version'?: (string);
 }
 
 export interface GetInfoResponse {
   'pubkey': (string);
-  'roundLifetime': (string);
+  'vtxoTreeExpiry': (string);
   'unilateralExitDelay': (string);
   'roundInterval': (string);
   'network': (string);
@@ -27,4 +28,5 @@ export interface GetInfoResponse {
   'vtxoDescriptorTemplates': (string)[];
   'forfeitAddress': (string);
   'marketHour': (_ark_v1_MarketHour | null);
+  'version': (string);
 }

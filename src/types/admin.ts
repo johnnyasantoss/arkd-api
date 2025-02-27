@@ -1,5 +1,5 @@
 import type * as grpc from '@grpc/grpc-js';
-import type { MessageTypeDefinition } from '@grpc/proto-loader';
+import type { EnumTypeDefinition, MessageTypeDefinition } from '@grpc/proto-loader';
 
 import type { AdminServiceClient as _ark_v1_AdminServiceClient, AdminServiceDefinition as _ark_v1_AdminServiceDefinition } from './ark/v1/AdminService';
 
@@ -13,6 +13,8 @@ export interface ProtoGrpcType {
       AdminService: SubtypeConstructor<typeof grpc.Client, _ark_v1_AdminServiceClient> & { service: _ark_v1_AdminServiceDefinition }
       CreateNoteRequest: MessageTypeDefinition
       CreateNoteResponse: MessageTypeDefinition
+      DeleteTxRequestsRequest: MessageTypeDefinition
+      DeleteTxRequestsResponse: MessageTypeDefinition
       GetMarketHourConfigRequest: MessageTypeDefinition
       GetMarketHourConfigResponse: MessageTypeDefinition
       GetRoundDetailsRequest: MessageTypeDefinition
@@ -21,11 +23,37 @@ export interface ProtoGrpcType {
       GetRoundsResponse: MessageTypeDefinition
       GetScheduledSweepRequest: MessageTypeDefinition
       GetScheduledSweepResponse: MessageTypeDefinition
+      GetTxRequestQueueRequest: MessageTypeDefinition
+      GetTxRequestQueueResponse: MessageTypeDefinition
+      Input: MessageTypeDefinition
+      MarketHour: MessageTypeDefinition
       MarketHourConfig: MessageTypeDefinition
+      Node: MessageTypeDefinition
+      Outpoint: MessageTypeDefinition
+      Output: MessageTypeDefinition
+      OwnershipProof: MessageTypeDefinition
+      RedeemTransaction: MessageTypeDefinition
+      RequestInput: MessageTypeDefinition
+      Round: MessageTypeDefinition
+      RoundFailed: MessageTypeDefinition
+      RoundFinalizationEvent: MessageTypeDefinition
+      RoundFinalizedEvent: MessageTypeDefinition
+      RoundSigningEvent: MessageTypeDefinition
+      RoundSigningNoncesGeneratedEvent: MessageTypeDefinition
+      RoundStage: EnumTypeDefinition
+      RoundTransaction: MessageTypeDefinition
       ScheduledSweep: MessageTypeDefinition
+      SignedVtxoOutpoint: MessageTypeDefinition
       SweepableOutput: MessageTypeDefinition
+      Tapscripts: MessageTypeDefinition
+      Tree: MessageTypeDefinition
+      TreeLevel: MessageTypeDefinition
+      TxRequestInfo: MessageTypeDefinition
       UpdateMarketHourConfigRequest: MessageTypeDefinition
       UpdateMarketHourConfigResponse: MessageTypeDefinition
+      Vtxo: MessageTypeDefinition
+      WithdrawRequest: MessageTypeDefinition
+      WithdrawResponse: MessageTypeDefinition
     }
   }
   google: {
